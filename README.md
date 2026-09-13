@@ -35,40 +35,25 @@ I like projects where **performance, architecture, networking, security and user
 
 ## Languages & technologies
 
-<div align="center">
+### Languages
 
-<img src="https://skillicons.dev/icons?i=c,cpp,rust,js,ts,nodejs,bun,electron,react,tauri,html,css,postgres,supabase,cloudflare,git,github,vscode&perline=9" alt="Technology stack" />
+<img src="https://skillicons.dev/icons?i=c,cpp,rust,js,ts&theme=dark" alt="C, C++, Rust, JavaScript and TypeScript" />
 
-</div>
+### Desktop & Runtime
+
+<img src="https://skillicons.dev/icons?i=nodejs,bun,electron,tauri&theme=dark" alt="Node.js, Bun, Electron and Tauri" />
+
+### Frontend & Backend
+
+<img src="https://skillicons.dev/icons?i=react,vite,html,css,postgres,supabase&theme=dark" alt="React, Vite, HTML, CSS, PostgreSQL and Supabase" />
+
+### Infrastructure & Tools
+
+<img src="https://skillicons.dev/icons?i=cloudflare,git,github,githubactions,vscode&theme=dark" alt="Cloudflare, Git, GitHub, GitHub Actions and VS Code" />
 
 <br/>
 
-<table>
-  <tr>
-    <td><strong>Languages</strong></td>
-    <td>C · C++ · Rust · JavaScript · TypeScript · SQL</td>
-  </tr>
-  <tr>
-    <td><strong>Runtime & Desktop</strong></td>
-    <td>Node.js · Bun · Electron · Tauri</td>
-  </tr>
-  <tr>
-    <td><strong>Frontend</strong></td>
-    <td>React · Vite · HTML · CSS</td>
-  </tr>
-  <tr>
-    <td><strong>Backend & Data</strong></td>
-    <td>Node.js · Supabase · PostgreSQL</td>
-  </tr>
-  <tr>
-    <td><strong>Realtime & Automation</strong></td>
-    <td>WebRTC · WebSockets · Discord.js</td>
-  </tr>
-  <tr>
-    <td><strong>Infrastructure & Tools</strong></td>
-    <td>Cloudflare · Git · GitHub · GitHub Actions</td>
-  </tr>
-</table>
+Also working with **WebRTC**, **WebSockets** and **Discord.js**.
 
 <br/>
 
