@@ -2,18 +2,9 @@
 
 # Marcos
 
-### Software Developer · 22 years old
+**Software Developer · 22 years old**
 
-<p>
-  Building software across desktop, backend, realtime systems and automation.
-  <br/>
-  Focused on performance, reliability, architecture and user experience.
-</p>
-
-<img
-  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2800&pause=900&color=8B949E&center=true&vCenter=true&width=680&lines=Software+Developer;C+%C2%B7+C%2B%2B+%C2%B7+JavaScript+%C2%B7+TypeScript+%C2%B7+Rust;Node.js+%C2%B7+Bun+%C2%B7+Electron+%C2%B7+Tauri;Backend+%C2%B7+Desktop+%C2%B7+Realtime+%C2%B7+Automation"
-  alt="Typing animation"
-/>
+Building desktop, backend and realtime software with a focus on performance, reliability and thoughtful engineering.
 
 </div>
 
@@ -21,15 +12,13 @@
 
 ## About me
 
-I'm **Marcos**, a 22-year-old software developer who enjoys building software and understanding how every layer works — from the interface to the backend and lower-level systems.
+I'm **Marcos**, a 22-year-old software developer who likes understanding how products work end to end — from native desktop code and networking to backend services and interfaces.
 
-I like projects where **performance, architecture, networking, security and user experience** matter. My main interests are desktop applications, backend systems, realtime communication, automation and systems programming.
+I care about **performance, architecture, security and user experience**, and I enjoy turning complex technical problems into software that feels simple and reliable to use.
 
-- Building desktop and web applications
-- Developing backend services, APIs and realtime systems
-- Working with bots and automation
-- Interested in networking and systems programming
-- Always learning, testing and improving the way I build software
+- Building desktop applications, backend services and realtime systems
+- Working with bots, automation, networking and media
+- Always learning more about systems programming and software architecture
 
 <br/>
 
@@ -59,12 +48,13 @@ Also working with **WebRTC**, **WebSockets** and **Discord.js**.
 
 ## What I enjoy building
 
-```text
-Desktop applications     Backend systems
-Realtime applications    Bots & automation
-Networking               Developer tools
-Voice & video             Performance-focused software
-```
+<div align="center">
+
+Desktop applications · Backend systems · Realtime communication · Bots & automation
+
+Networking · Developer tools · Voice & video · Performance engineering
+
+</div>
 
 <br/>
 
@@ -73,9 +63,9 @@ Voice & video             Performance-focused software
 <div align="center">
 
 <img
-  width="560"
-  src="./profile/stats.svg"
-  alt="Marcos GitHub statistics"
+  width="100%"
+  src="./profile/activity.svg"
+  alt="Marcos GitHub activity over the last 12 months"
 />
 
 </div>
@@ -86,8 +76,6 @@ Voice & video             Performance-focused software
 
 <div align="center">
 
-### `@1blayze`
-
-**Building software, understanding systems and improving every layer.**
+<sub><strong>@1blayze</strong> · Building software with curiosity, precision and care.</sub>
 
 </div>
