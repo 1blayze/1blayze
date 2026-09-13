@@ -39,10 +39,6 @@ I like projects where **performance, architecture, networking, security and user
 
 <img src="https://skillicons.dev/icons?i=c,cpp,rust,js,ts,nodejs,bun,electron,react,tauri,html,css,postgres,supabase,cloudflare,git,github,vscode&perline=9" alt="Technology stack" />
 
-<br/><br/>
-
-<img src="https://cdn.simpleicons.org/discord/5865F2" height="42" alt="Discord.js" title="Discord.js" />
-
 </div>
 
 <br/>
@@ -92,31 +88,22 @@ Voice & video             Performance-focused software
 <div align="center">
 
 <img
-  height="170"
-  src="https://github-readme-stats.vercel.app/api?username=1blayze&show_icons=true&hide_border=true&include_all_commits=true&theme=github_dark"
-  alt="Marcos GitHub stats"
-/>
-
-<br/>
-
-<img
-  src="https://streak-stats.demolab.com?user=1blayze&theme=github-dark-blue&hide_border=true"
-  alt="Marcos GitHub streak"
+  width="100%"
+  src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=1blayze&theme=github_dark&animation=draw"
+  alt="Marcos GitHub profile activity"
 />
 
 <br/><br/>
 
 <img
-  width="95%"
-  src="https://github-readme-activity-graph.vercel.app/graph?username=1blayze&theme=github-compact&hide_border=true&area=true"
-  alt="Marcos contribution graph"
+  width="49%"
+  src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=1blayze&theme=github_dark&hide_logo=true&animation=rise"
+  alt="Marcos GitHub stats"
 />
-
-<br/>
-
 <img
-  src="https://komarev.com/ghpvc/?username=1blayze&label=Profile%20views&color=555555&style=flat"
-  alt="Profile views"
+  width="49%"
+  src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=1blayze&theme=github_dark&utcOffset=-3&animation=rise"
+  alt="Marcos productive time"
 />
 
 </div>
