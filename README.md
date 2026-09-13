@@ -1,0 +1,134 @@
+<div align="center">
+
+# Marcos
+
+### Software Developer · 22 years old
+
+<p>
+  Building software across desktop, backend, realtime systems and automation.
+  <br/>
+  Focused on performance, reliability, architecture and user experience.
+</p>
+
+<img
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=2800&pause=900&color=8B949E&center=true&vCenter=true&width=680&lines=Software+Developer;C+%C2%B7+C%2B%2B+%C2%B7+JavaScript+%C2%B7+TypeScript+%C2%B7+Rust;Node.js+%C2%B7+Bun+%C2%B7+Electron+%C2%B7+Tauri;Backend+%C2%B7+Desktop+%C2%B7+Realtime+%C2%B7+Automation"
+  alt="Typing animation"
+/>
+
+</div>
+
+<br/>
+
+## About me
+
+I'm **Marcos**, a 22-year-old software developer who enjoys building software and understanding how every layer works — from the interface to the backend and lower-level systems.
+
+I like projects where **performance, architecture, networking, security and user experience** matter. My main interests are desktop applications, backend systems, realtime communication, automation and systems programming.
+
+- Building desktop and web applications
+- Developing backend services, APIs and realtime systems
+- Working with bots and automation
+- Interested in networking and systems programming
+- Always learning, testing and improving the way I build software
+
+<br/>
+
+## Languages & technologies
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=c,cpp,rust,js,ts,nodejs,bun,electron,react,tauri,html,css,postgres,supabase,cloudflare,git,github,vscode&perline=9" alt="Technology stack" />
+
+<br/><br/>
+
+<img src="https://cdn.simpleicons.org/discord/5865F2" height="42" alt="Discord.js" title="Discord.js" />
+
+</div>
+
+<br/>
+
+<table>
+  <tr>
+    <td><strong>Languages</strong></td>
+    <td>C · C++ · Rust · JavaScript · TypeScript · SQL</td>
+  </tr>
+  <tr>
+    <td><strong>Runtime & Desktop</strong></td>
+    <td>Node.js · Bun · Electron · Tauri</td>
+  </tr>
+  <tr>
+    <td><strong>Frontend</strong></td>
+    <td>React · Vite · HTML · CSS</td>
+  </tr>
+  <tr>
+    <td><strong>Backend & Data</strong></td>
+    <td>Node.js · Supabase · PostgreSQL</td>
+  </tr>
+  <tr>
+    <td><strong>Realtime & Automation</strong></td>
+    <td>WebRTC · WebSockets · Discord.js</td>
+  </tr>
+  <tr>
+    <td><strong>Infrastructure & Tools</strong></td>
+    <td>Cloudflare · Git · GitHub · GitHub Actions</td>
+  </tr>
+</table>
+
+<br/>
+
+## What I enjoy building
+
+```text
+Desktop applications     Backend systems
+Realtime applications    Bots & automation
+Networking               Developer tools
+Voice & video             Performance-focused software
+```
+
+<br/>
+
+## GitHub activity
+
+<div align="center">
+
+<img
+  height="170"
+  src="https://github-readme-stats.vercel.app/api?username=1blayze&show_icons=true&hide_border=true&include_all_commits=true&theme=github_dark"
+  alt="Marcos GitHub stats"
+/>
+
+<br/>
+
+<img
+  src="https://streak-stats.demolab.com?user=1blayze&theme=github-dark-blue&hide_border=true"
+  alt="Marcos GitHub streak"
+/>
+
+<br/><br/>
+
+<img
+  width="95%"
+  src="https://github-readme-activity-graph.vercel.app/graph?username=1blayze&theme=github-compact&hide_border=true&area=true"
+  alt="Marcos contribution graph"
+/>
+
+<br/>
+
+<img
+  src="https://komarev.com/ghpvc/?username=1blayze&label=Profile%20views&color=555555&style=flat"
+  alt="Profile views"
+/>
+
+</div>
+
+<br/>
+
+---
+
+<div align="center">
+
+### `@1blayze`
+
+**Building software, understanding systems and improving every layer.**
+
+</div>
