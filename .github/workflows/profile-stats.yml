@@ -1,11 +1,10 @@
-name: Update profile stats
+name: Update profile activity
 
 on:
   push:
     branches: [main]
     paths:
       - '.github/workflows/profile-stats.yml'
-      - 'README.md'
   schedule:
     - cron: '17 3 * * *'
   workflow_dispatch:
@@ -21,19 +20,147 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Generate profile stats
-        uses: stats-organization/github-readme-stats-action@v2
+      - name: Generate activity SVG
+        uses: actions/github-script@v8
         with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&hide_border=true&hide_rank=true&include_all_commits=true&bg_color=00000000&title_color=58a6ff&text_color=c9d1d9&icon_color=8b949e&ring_color=58a6ff
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fail_on_error: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
 
-      - name: Commit generated stats
+            const login = context.repo.owner;
+            const toDate = new Date();
+            const fromDate = new Date(toDate);
+            fromDate.setUTCFullYear(toDate.getUTCFullYear() - 1);
+
+            const data = await github.graphql(`
+              query($login: String!, $from: DateTime!, $to: DateTime!) {
+                user(login: $login) {
+                  repositories(ownerAffiliations: OWNER, privacy: PUBLIC, first: 100) {
+                    totalCount
+                  }
+                  contributionsCollection(from: $from, to: $to) {
+                    totalCommitContributions
+                    totalPullRequestContributions
+                    contributionCalendar {
+                      totalContributions
+                      weeks {
+                        contributionDays {
+                          date
+                          contributionCount
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `, {
+              login,
+              from: fromDate.toISOString(),
+              to: toDate.toISOString()
+            });
+
+            const user = data.user;
+            const collection = user.contributionsCollection;
+            const weeks = collection.contributionCalendar.weeks;
+            const days = weeks.flatMap((week) => week.contributionDays);
+
+            let longestStreak = 0;
+            let runningStreak = 0;
+            for (const day of days) {
+              if (day.contributionCount > 0) {
+                runningStreak += 1;
+                longestStreak = Math.max(longestStreak, runningStreak);
+              } else {
+                runningStreak = 0;
+              }
+            }
+
+            let currentStreak = 0;
+            let index = days.length - 1;
+            if (index >= 0 && days[index].contributionCount === 0) index -= 1;
+            while (index >= 0 && days[index].contributionCount > 0) {
+              currentStreak += 1;
+              index -= 1;
+            }
+
+            const width = 790;
+            const height = 214;
+            const gridX = 48;
+            const gridY = 116;
+            const cell = 10;
+            const gap = 3;
+
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            let lastMonth = -1;
+            const monthLabels = [];
+            const cells = [];
+
+            weeks.forEach((week, weekIndex) => {
+              const first = week.contributionDays[0];
+              if (first) {
+                const month = new Date(first.date + 'T00:00:00Z').getUTCMonth();
+                if (month !== lastMonth) {
+                  monthLabels.push(`<text class="month" x="${gridX + weekIndex * (cell + gap)}" y="104">${monthNames[month]}</text>`);
+                  lastMonth = month;
+                }
+              }
+
+              week.contributionDays.forEach((day, dayIndex) => {
+                const count = day.contributionCount;
+                const level = count === 0 ? 0 : count === 1 ? 1 : count <= 3 ? 2 : count <= 6 ? 3 : 4;
+                cells.push(`<rect class="level-${level}" x="${gridX + weekIndex * (cell + gap)}" y="${gridY + dayIndex * (cell + gap)}" width="${cell}" height="${cell}" rx="2"><title>${day.date}: ${count} contribution${count === 1 ? '' : 's'}</title></rect>`);
+              });
+            });
+
+            const stat = (x, value, label) => `
+              <text class="value" x="${x}" y="37">${value}</text>
+              <text class="label" x="${x}" y="58">${label}</text>`;
+
+            const svg = `<?xml version="1.0" encoding="UTF-8"?>
+            <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">
+              <title id="title">Marcos GitHub activity</title>
+              <desc id="desc">${collection.contributionCalendar.totalContributions} contributions in the last year, ${currentStreak} day current streak, ${longestStreak} day longest streak, ${user.repositories.totalCount} public repositories.</desc>
+              <style>
+                text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+                .value { fill: #f0f6fc; font-size: 22px; font-weight: 650; }
+                .label { fill: #8b949e; font-size: 12px; }
+                .month { fill: #8b949e; font-size: 10px; }
+                .weekday { fill: #8b949e; font-size: 9px; }
+                .rule { stroke: #30363d; }
+                .level-0 { fill: #161b22; stroke: #30363d; stroke-width: .5; }
+                .level-1 { fill: #0e4429; }
+                .level-2 { fill: #006d32; }
+                .level-3 { fill: #26a641; }
+                .level-4 { fill: #39d353; }
+                @media (prefers-color-scheme: light) {
+                  .value { fill: #1f2328; }
+                  .label, .month, .weekday { fill: #656d76; }
+                  .rule { stroke: #d0d7de; }
+                  .level-0 { fill: #ebedf0; stroke: #d0d7de; }
+                }
+              </style>
+
+              ${stat(22, collection.contributionCalendar.totalContributions, 'contributions')}
+              ${stat(214, currentStreak, 'current streak')}
+              ${stat(406, longestStreak, 'longest streak')}
+              ${stat(598, user.repositories.totalCount, 'public repositories')}
+
+              <line class="rule" x1="22" x2="768" y1="78" y2="78" />
+
+              ${monthLabels.join('\n')}
+              <text class="weekday" x="22" y="137">Mon</text>
+              <text class="weekday" x="22" y="163">Wed</text>
+              <text class="weekday" x="22" y="189">Fri</text>
+              ${cells.join('\n')}
+            </svg>`;
+
+            fs.mkdirSync('profile', { recursive: true });
+            fs.writeFileSync('profile/activity.svg', svg.trim() + '\n');
+
+      - name: Commit generated activity
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/stats.svg
-          git diff --cached --quiet || git commit -m "chore: update profile stats"
+          git add profile/activity.svg
+          git diff --cached --quiet || git commit -m "chore: update profile activity"
           git push
