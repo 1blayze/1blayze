@@ -24,25 +24,29 @@ I care about **performance, architecture, security and user experience**, and I 
 
 ## Languages & technologies
 
-### Languages
+<div align="center">
+
+<h3>Languages</h3>
 
 <img src="https://skillicons.dev/icons?i=c,cpp,rust,js,ts&theme=dark" alt="C, C++, Rust, JavaScript and TypeScript" />
 
-### Desktop & Runtime
+<h3>Desktop & Runtime</h3>
 
 <img src="https://skillicons.dev/icons?i=nodejs,bun,electron,tauri&theme=dark" alt="Node.js, Bun, Electron and Tauri" />
 
-### Frontend & Backend
+<h3>Frontend & Backend</h3>
 
 <img src="https://skillicons.dev/icons?i=react,vite,html,css,postgres,supabase&theme=dark" alt="React, Vite, HTML, CSS, PostgreSQL and Supabase" />
 
-### Infrastructure & Tools
+<h3>Infrastructure & Tools</h3>
 
 <img src="https://skillicons.dev/icons?i=cloudflare,git,github,githubactions,vscode&theme=dark" alt="Cloudflare, Git, GitHub, GitHub Actions and VS Code" />
 
-<br/>
+<br/><br/>
 
-Also working with **WebRTC**, **WebSockets** and **Discord.js**.
+Also working with <strong>WebRTC</strong>, <strong>WebSockets</strong> and <strong>Discord.js</strong>.
+
+</div>
 
 <br/>
 
