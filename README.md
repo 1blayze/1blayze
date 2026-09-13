@@ -73,22 +73,9 @@ Voice & video             Performance-focused software
 <div align="center">
 
 <img
-  width="100%"
-  src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=1blayze&theme=github_dark&animation=draw"
-  alt="Marcos GitHub profile activity"
-/>
-
-<br/><br/>
-
-<img
-  width="49%"
-  src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=1blayze&theme=github_dark&hide_logo=true&animation=rise"
-  alt="Marcos GitHub stats"
-/>
-<img
-  width="49%"
-  src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=1blayze&theme=github_dark&utcOffset=-3&animation=rise"
-  alt="Marcos productive time"
+  width="560"
+  src="./profile/stats.svg"
+  alt="Marcos GitHub statistics"
 />
 
 </div>
